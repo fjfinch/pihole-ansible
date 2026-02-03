@@ -1,7 +1,5 @@
 # pihole-ansible
-Ansible playbook for deploying and configuring a Pi-hole container.
-
-Pi-hole is a DNS sinkhole that protects your devices from unwanted content.
+Ansible playbook for deploying and configuring a Pi-hole container. Pi-hole is a DNS sinkhole that protects your devices from unwanted content.
 
 > Note: You can consider using Pi-hole for the host system -> configure *127.0.0.1* to be the hosts nameserver. This however has one drawback: if the Pi-hole fails, the host does not have a working DNS setup and might prevent you from repairing the Pi-hole installation (if you don't have much networking experience).
 
