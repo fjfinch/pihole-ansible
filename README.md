@@ -1,9 +1,9 @@
 # pihole-ansible
-Ansible playbook for deploying and configuring a Pi-hole container. Tested on Ubuntu (x86 and ARM).
+Ansible playbook for deploying and configuring a Pi-hole container.
 
-Note 1: Pi-hole requires information about the hosts network for it's configuration (device ip / gateway ip / subnet prefix / etc.). So make sure the host has network connectivity.
+Pi-hole is a DNS sinkhole that protects your devices from unwanted content.
 
-Note 2: You can consider using Pi-hole for the host system -> configure *127.0.0.1* to be the hosts nameserver. This however has one drawback: if the Pi-hole fails, the host does not have a working DNS setup and might prevent you from repairing the Pi-hole installation (if you don't have much networking experience).
+> Note: You can consider using Pi-hole for the host system -> configure *127.0.0.1* to be the hosts nameserver. This however has one drawback: if the Pi-hole fails, the host does not have a working DNS setup and might prevent you from repairing the Pi-hole installation (if you don't have much networking experience).
 
 ## Install & setup
 To use this repo, a couple of tools are required:
@@ -28,12 +28,12 @@ ansible-galaxy collection install -r requirements.yml
 ```
 
 4 - Execute the playbook:
-> Note: change the *password* variable in `main.yml`
+> Note: add a password first by creating the file `files/env/pihole_secrets.env` with the variable *FTLCONF\_webserver\_api\_password=''*
 ```bash
 ansible-playbook main.yml -K
 ```
 
-## Optional
+## Extra
 Extra blocklists for Pi-hole are optional. If needed, go to the 'Lists' page and add the following URLs:
 ```bash
 https://v.firebog.net/hosts/AdguardDNS.txt
