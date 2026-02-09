@@ -4,9 +4,6 @@
   gather_facts: false
   become_method: sudo
 
-  vars:
-    pihole_password: ''
-
   pre_tasks:
     - name: 'Connect to host & retrieve facts'
       ansible.builtin.setup:
@@ -20,5 +17,5 @@
     - role: GITHUB.DOCKER.ROLE
 
   tasks:
-    - import_tasks: tasks/stub-resolver.yml # used for pi-hole on ubuntu
+    - import_tasks: tasks/stub-resolver.yml # needed for pi-hole on ubuntu
     - import_tasks: tasks/docker.yml
