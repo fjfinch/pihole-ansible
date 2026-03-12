@@ -26,7 +26,7 @@ ansible-galaxy collection install -r requirements.yml
 ```
 
 4 - Execute the playbook:
-> Note: add a password first by creating the file `files/env/pihole_secrets.env` with the variable *FTLCONF\_webserver\_api\_password=''*
+> Note: add a password first by creating the file `files/config_secrets.env` with the variable *FTLCONF\_webserver\_api\_password=''*
 ```bash
 ansible-playbook main.yml -K
 ```
