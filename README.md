@@ -34,20 +34,20 @@ ansible-playbook main.yml -K
 ## Extra
 Extra blocklists for Pi-hole are optional. If needed, go to the 'Lists' page and add the following URLs:
 ```bash
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
 https://v.firebog.net/hosts/AdguardDNS.txt
-https://v.firebog.net/hosts/Easyprivacy.txt
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/light.txt
-https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
 https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt
 https://urlhaus.abuse.ch/downloads/hostfile/
+https://v.firebog.net/hosts/Easyprivacy.txt
 
 The lists are, in order:
-Advertising
-Tracking & Telemetry
 All
-Malicious
+Advertising
 Advertising
 Malicious
+Malicious
+Tracking & Telemetry
 ```
 
 Next is to update gravity. Under the 'Tools' tab, go to the 'Update Gravity' page. Or run `sudo docker exec -it pihole pihole updateGravity` in the CLI.
